@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Hero = () => {
     return (
-        <div className="container mx-auto bg-[#222630] px-14 py-17.5 flex items-center justify-between my-12 rounded-2xl">
+        <div className="container mx-auto bg-[#222630] px-14 py-17.5 flex items-center justify-between mt-12 rounded-2xl">
             {/* div1 */}
             <div>
                 <h3 className="font-Inter text-[#C2F800] font-bold text-sm mb-5">WORKOUT LIBRARY</h3>

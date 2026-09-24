@@ -1,11 +1,15 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 
 const Navber = () => {
+    const pathname = usePathname()
     const link = <>
-        <li> <Link href="/workouts" className=" text-[#C2F800] font-Inter font-semibold text-sm bg-[#1A2312] rounded-full px-4 py-1.5 ">Workouts</Link></li>
-        <li> <Link href="/" className=" text-[#9CA3AF] font-Inter font-semibold text-sm ">My Plan</Link></li>
+        <li> <Link href="/workouts" className={`   font-Inter font-semibold text-sm ${pathname === "/workouts" ? "text-[#C2F800] bg-[#1A2312] rounded-full px-4 py-1.5" : "text-[#9CA3AF]"
+            } `}>Workouts</Link></li>
+        <li> <Link href="/myplan" className={`  font-Inter font-semibold text-sm ${pathname === "/myplan" ? "text-[#C2F800] bg-[#1A2312] rounded-full px-4 py-1.5" : "text-[#9CA3AF]"} `}>My Plan</Link></li>
 
     </>
     return (
