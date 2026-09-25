@@ -2,6 +2,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Planlength from "./Planlength"
+import Savelength from "./Savelength"
 
 
 const Navber = () => {
@@ -38,11 +40,9 @@ const Navber = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="flex items-center gap-5">
-                        <button> <a className="text-[#D1D5DB] text-sm font-Inter font-medium cursor-pointer ">Plan  <span className="bg-[#C2F800] rounded-full px-1.5 py-0.5 text-black font-bold">0</span></a></button>
+                       <Planlength/>
                         {/* button 2 */}
-                        <button>
-                            <a className="text-[#9CA3AF] text-sm font-Inter font-medium  cursor-pointer">Saved  <span className="border border-[#2D313B] rounded-full px-1.5 py-0.5 text-[#D1D5DB] font-bold">0</span></a>
-                        </button>
+                        <Savelength/>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 import Image from "next/image"
-import { FiBookmark } from "react-icons/fi"
-import { MdDateRange } from "react-icons/md"
+
+
+import Todayaddbutton from "./Todayaddbutton"
+import Savebutton from "./Savebutton"
 
 interface SingleType {
   singledata: SingleTypeData
@@ -12,7 +14,7 @@ const SingleCard = ({ singledata }: SingleType) => {
     <div className="my-12  container mx-auto bg-[#0C0D10] flex  gap-14">
       {/* images */}
       <div className="w-1/2 ">
-        <Image src={singledata.image} width={588} height={735} alt={singledata.name} className="rounded-2xl w-full h-full object-cover"></Image>
+        <Image src={singledata.image} width={588} height={735} alt={singledata.name} priority className="rounded-2xl w-full h-full object-cover"></Image>
       </div>
       {/* text  */}
       <div className="w-1/2">
@@ -90,8 +92,8 @@ const SingleCard = ({ singledata }: SingleType) => {
           }
         </div>
         <div className="mt-9 flex items-center gap-4">
-          <button className="flex items-center gap-2 text-[#0F1115] px-6 py-3 bg-[#CCFF00] rounded-xl font-semibold"><MdDateRange /> Add to today's plan</button>
-          <button className="flex items-center gap-2 text-[#E5E7EB] px-6 py-3 border border-[#374151] rounded-xl font-semibold "><FiBookmark />Save for later</button>
+          <Todayaddbutton singledata={singledata} />
+          <Savebutton singledata={singledata} />
         </div>
 
 
