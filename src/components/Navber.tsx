@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useState } from "react"
+import { FiMenu, FiX } from "react-icons/fi"
+
 import Planlength from "./Planlength"
 import Savelength from "./Savelength"
 
@@ -51,7 +53,6 @@ const Navber = () => {
 
     return (
         <>
-            {/* Navbar */}
             <nav
                 className="fixed top-0 left-0 right-0 z-50 w-full bg-[#0C0D10] shadow-sm border-b border-[#1C1F26]"
                 suppressHydrationWarning
@@ -65,38 +66,13 @@ const Navber = () => {
                         <button
                             type="button"
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="lg:hidden btn btn-ghost transition-transform duration-300 hover:scale-110"
+                            className="lg:hidden btn btn-ghost text-[#C2F800] transition-transform duration-300 hover:scale-110"
+                            aria-label={menuOpen ? "Close menu" : "Open menu"}
                         >
                             {menuOpen ? (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5 text-[#C2F800]"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M6 6l12 12M6 18L18 6"
-                                    />
-                                </svg>
+                                <FiX className="h-5 w-5" />
                             ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5 text-[#C2F800]"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h8m-8 6h16"
-                                    />
-                                </svg>
+                                <FiMenu className="h-5 w-5" />
                             )}
                         </button>
 
