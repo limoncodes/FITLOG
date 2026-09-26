@@ -16,6 +16,8 @@ const SaveRemovedbutton = ({ item }: { item: SingleTypeData }) => {
     const handleRemoved = (value: number) => {
         const newdata = savesort.filter(item => item.id !== value)
         setsavesort(newdata)
+        const newsave = save.filter(item=> item.id !== value)
+        setsave(newsave)
         
         toast.warn(`${item.name} Removed`)
 
