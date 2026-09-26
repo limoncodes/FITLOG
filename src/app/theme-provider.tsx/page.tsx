@@ -6,9 +6,13 @@ export const ThemeContext= createContext({})
 const ThemeProvider = ({children}:{children:React.ReactNode}) => {
     const [todayplan,setrodayplan]= useState([])
     const [save,setsave]= useState([])
+    const [sort,setsort]= useState([])
+    const [savesort,setsavesort]= useState([])
     const fitloguse = {
         todayplan,setrodayplan,
-        save,setsave
+        save,setsave,
+        sort,setsort,
+        savesort,setsavesort
 
     }
 

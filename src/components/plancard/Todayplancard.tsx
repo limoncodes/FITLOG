@@ -8,11 +8,12 @@ import TodayRemovebutton from "./TodayRemovebutton";
 
 
 const Todayplancard = () => {
-    const { todayplan } = useContext(ThemeContext) as {
+    const { todayplan ,sort } = useContext(ThemeContext) as {
         todayplan: SingleTypeData[];
+        sort:SingleTypeData[]
      
     }
-    if (todayplan.length === 0) {
+    if (sort.length === 0) {
         return <div className="border border-dashed border-[#282A2D] rounded-xl h-75 w-full ">
             <div className="flex flex-col items-center justify-center h-full">
                 <h2 className="text-white font-Oswald text-xl mb-2 font-bold ">NOTHING HERE YET</h2>
@@ -27,7 +28,7 @@ const Todayplancard = () => {
 
     return (
         <div className="flex flex-col gap-4">
-            {todayplan.map((item) => {
+            {sort.map((item) => {
                 return (
                     <div
                         key={item.id}

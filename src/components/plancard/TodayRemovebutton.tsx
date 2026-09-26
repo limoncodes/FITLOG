@@ -8,19 +8,21 @@ import { toast } from "react-toastify"
 
 
 const TodayRemovebutton = ({item}:{item:SingleTypeData}) => {
-    const { todayplan, setrodayplan } = useContext(ThemeContext) as {
+    const { todayplan, setrodayplan ,sort ,setsort } = useContext(ThemeContext) as {
             todayplan: SingleTypeData[];
             setrodayplan: Dispatch<SetStateAction<SingleTypeData[]>>;
+            sort:SingleTypeData[];
+            setsort :Dispatch<SetStateAction<SingleTypeData[]>>;
         }
     const handlecomplied = (value:number)=>{
-        const newdata = todayplan.filter(item=> item.id !== value)
-        setrodayplan(newdata)
+        const newdata = sort.filter(item=> item.id !== value)
+         setsort(newdata)
         toast.success(`${item.name} done`)
 
     }
     const handleRemoved = (value:number)=>{
-        const newdata = todayplan.filter(item=> item.id !== value)
-        setrodayplan(newdata)
+        const newdata = sort.filter(item=> item.id !== value)
+         setsort(newdata)
         toast.warn(`${item.name} Removed`)
 
     }

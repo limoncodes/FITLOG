@@ -7,13 +7,16 @@ import { IoMdClose } from "react-icons/io"
 import { toast } from "react-toastify"
 
 const SaveRemovedbutton = ({ item }: { item: SingleTypeData }) => {
-    const { save, setsave } = useContext(ThemeContext) as {
+    const { save, setsave , savesort ,setsavesort } = useContext(ThemeContext) as {
         save: SingleTypeData[];
         setsave: Dispatch<SetStateAction<SingleTypeData[]>>;
+        savesort:SingleTypeData[];
+        setsavesort:Dispatch<SetStateAction<SingleTypeData[]>>;
     }
     const handleRemoved = (value: number) => {
-        const newdata = save.filter(item => item.id !== value)
-        setsave(newdata)
+        const newdata = savesort.filter(item => item.id !== value)
+        setsavesort(newdata)
+        
         toast.warn(`${item.name} Removed`)
 
     }
