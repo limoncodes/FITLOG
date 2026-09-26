@@ -21,7 +21,7 @@ const LoadingSkin = () => {
       {/* Text */}
       <div className="mt-6 text-center">
         <h3 className="text-white font-Inter font-bold text-lg tracking-wide">
-          Loading workouts...
+          Loading Details...
         </h3>
 
         

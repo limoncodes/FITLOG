@@ -23,7 +23,7 @@ const TodayRemovebutton = ({ item }: { item: SingleTypeData }) => {
         const newTodayPlan = todayplan.filter(item => item.id !== value);
         setrodayplan(newTodayPlan);
 
-        toast.warn(`${item.name} Removed`);
+        toast.success(`${item.name} Completed`);
 
     }
     const handleRemoved = (value: number) => {
@@ -31,7 +31,7 @@ const TodayRemovebutton = ({ item }: { item: SingleTypeData }) => {
         setsort(newdata)
         const newTodayplan = todayplan.filter(item=> item.id !== value)
         setrodayplan(newTodayplan );
-        toast.warn(`${item.name} Removed`)
+        toast.warn(`${item.name} Removed`);
 
     }
     return (

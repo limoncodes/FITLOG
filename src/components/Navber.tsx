@@ -21,7 +21,7 @@ const Navber = () => {
                     href="/workouts"
                     onClick={() => setMenuOpen(false)}
                     className={`font-Inter font-semibold text-sm transition-all duration-300 ${
-                        pathname === "/workouts"
+                        pathname === "/workouts" || pathname === "/"
                             ? "text-[#C2F800] bg-[#1A2312] rounded-full px-4 py-1.5"
                             : "text-[#9CA3AF] hover:text-[#C2F800]"
                     }`}

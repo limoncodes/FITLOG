@@ -21,12 +21,10 @@ const LoadingSkin = () => {
       {/* Text */}
       <div className="mt-6 text-center">
         <h3 className="text-white font-Inter font-bold text-lg tracking-wide">
-          Loading Library
+          Loading workouts...
         </h3>
 
-        <p className="text-[#6B7280] text-sm mt-1">
-          Preparing your workouts...
-        </p>
+       
       </div>
 
       {/* Loading dots */}
